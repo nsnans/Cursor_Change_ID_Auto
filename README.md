@@ -5,7 +5,7 @@
 > 
 > 获取最新版本请加入QQ群：631250950
 
-## 🚀 最新更新 v5.0.0
+## 🚀 最新更新 v5.1.0
 - 新增支持 Cursor v0.45.x 版本
 - 优化界面显示和用户体验
 - **优化整体注册速度**
@@ -41,7 +41,6 @@
 ## 💻 系统要求
 - Windows/macOS/Linux 系统
 - 已安装 Google Chrome 浏览器
-- Python 3.7 或更高版本
 - 稳定的网络连接
 
 ## ⚙️ 配置说明
@@ -64,6 +63,9 @@
    # WAIT_BEFORE_VERIFY=5  # 等待验证码输入时间（秒） 确保页面元素完全加载，提高验证成功率
    TURNSTILE_TIMEOUT=20  # Turnstile 验证超时时间（秒）
    
+   # 验证码邮件有效期（秒）
+   VERIFICATION_CODE_TIMEOUT=180 # 默认3分钟，如果网络较慢可以适当增加
+   
    # 是否自动清理所有 Cursor 邮件（避免堆积太多验证码邮件）
    CLEAN_ALL_CURSOR_MAILS='True'  # True False
    
@@ -82,7 +84,7 @@
    TEMP_MAIL=null
    
    # IMAP服务器配置(TEMP_MAIL为null时必填)
-   # 推荐使用QQ邮箱 163邮箱 126邮箱 等邮箱
+   # 推荐使用QQ邮箱
    IMAP_SERVER=imap.qq.com    # IMAP电子邮件服务器主机名
    IMAP_PORT=993               # IMAP端口，SSL通常为993
    IMAP_USER=xxx@qq.com        # 电子邮件地址
